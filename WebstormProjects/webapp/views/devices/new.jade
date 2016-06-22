@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    h1.
+        #{title}
+    form#formAddDevice(name="addDevice",method="post",action="/devices")
+        p Name:&nbsp&nbsp&nbsp&nbsp
+            input#inputName(type="text", placeholder="ex. Iphone 6s", name="name")
+        p Version:&nbsp&nbsp
+            input#inputVersion(type="text", placeholder="ex. 9.3", name="version")
+        p DOB:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            input#inputDob(type="date", name="dob")
+        p Owner:&nbsp&nbsp&nbsp
+            input#inputOwner(type="text",placeholder="ex. John Doe", name="owner")
+        p
+            button#btnSubmit(type="submit") Submit

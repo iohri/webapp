@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    h1.
+        Device ID #{device._id}
+    form(action='/devices/#{device._id}/edit',method='post',name='updateDevice',enctype='application/x-www-form-urlencoded')
+        p Name:&nbsp
+            input#inputName(type='text', value='#{device.name}', name='name')
+        p Version:&nbsp
+            input#inputVersion(type='text', value='#{device.version}', name='version')
+        p DOB:&nbsp
+            input#inputDob(type='date', value='#{devicedob}', name='dob')
+        p Owner:&nbsp
+            input#inputOwner(type='text', value='#{device.owner}', name='owner')
+        p
+            input(type='hidden',value='PUT',name='_method')
+        p
+            button#btnSubmit(type='submit').
+                Update

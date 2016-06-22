@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+    h1.
+        #{title}
+    ul
+        - each device, i in devices
+            li
+                = device.name
+                = "  , "
+                = device.version
+                = "  , "
+                = device.dob
+                = "  , "
+                = device.owner
+            p
+                form(action='/devices/#{device._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                    input(type='hidden',value='DELETE',name='_method')
+                    button(type='submit').
+                        Delete
+                p
+                    a(href='/devices/#{device._id}/edit') Edit
+                p
+                    a(href='/devices/#{device._id}') Show
+
+    p
+        a(href='/devices/new') Add New Device
