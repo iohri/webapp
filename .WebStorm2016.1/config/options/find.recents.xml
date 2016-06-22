@@ -1,0 +1,11 @@
+<application>
+  <component name="FindRecents">
+    <findStrings>
+      <find>config</find>
+      <find>edit</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\ipek.ohri\WebstormProjects\untitled</dir>
+    </dirStrings>
+  </component>
+</application>
