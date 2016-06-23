@@ -10,7 +10,7 @@ var deviceSchema = new mongoose.Schema({
         required : true
     },
     dob: { 
-        type: Date, 
+        type: Date,
         default: Date.now,
         required : true
     },
@@ -20,4 +20,3 @@ var deviceSchema = new mongoose.Schema({
     }
 });
 mongoose.model('Device', deviceSchema);
-

@@ -10,7 +10,11 @@ block content
                 = "  , "
                 = device.version
                 = "  , "
-                = device.dob.toDateString()
+                = device.dob.getDate()
+                = "."
+                = device.dob.getMonth()+1
+                = "."
+                = device.dob.getFullYear()
                 = "  , "
                 = device.owner
             p

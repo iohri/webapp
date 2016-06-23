@@ -5,7 +5,7 @@ block content
         Infophoto #{device._id}
     p Name: #{device.name}
     p Version: #{device.version}
-    p DOB: #{device.dob}
+    p DOB: #{device.dob.getDate()}.#{device.dob.getMonth()+1}.#{device.dob.getFullYear()}
     p Owner: #{device.owner}
 
        p
